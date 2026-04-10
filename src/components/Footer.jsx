@@ -22,7 +22,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-slate-500 text-sm text-center">
-          &copy; {currentYear} Arham Buradd. All rights reserved.
+          &copy; {currentYear} Arham Mayur Burad. All rights reserved.
         </p>
       </div>
     </footer>

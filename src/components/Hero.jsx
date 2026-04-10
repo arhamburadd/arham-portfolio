@@ -30,7 +30,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          ARHAM <span className="text-transparent bg-clip-text bg-gradient-to-r from-electricBlue to-neonGreen">BURADD</span>
+          ARHAM MAYUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-electricBlue to-neonGreen">BURAD</span>
         </motion.h1>
 
         <motion.h2 
