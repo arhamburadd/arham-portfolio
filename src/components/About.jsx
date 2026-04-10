@@ -49,19 +49,19 @@ export default function About() {
             <div className="text-lg text-slate-300 leading-relaxed space-y-6 relative z-10 font-sans">
               <p>
                 <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                Hi, I’m Arham Mayur Burad, a second-year student at PES University. I like to think I’ve mastered the fine balance between doing absolutely nothing and getting things done exactly when it matters. Whether it’s binge-watching or gaming, I take my downtime seriously—but when it’s time to be productive, I show up.
+                Hi, I’m Arham Mayur Burad, a second-year student at PES University. I like to think I’ve figured out how to balance doing absolutely nothing and getting things done when it actually matters. I enjoy bingewatching and gaming, but when it’s time to be productive, I get things done.
               </p>
               <p>
                 <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                My journey started with a small curiosity for robotics, which slowly turned into a genuine interest in building and understanding how things work. With constant support (and a fair bit of pushing) from my parents, that curiosity grew into something much bigger—and that’s a big part of how I got to where I am today.
+                My journey started with a small interest in robotics, which slowly grew into a real curiosity about how things work and how to build them. With a lot of support and some pushing from my parents, that interest turned into something much bigger and shaped where I am today.
               </p>
               <p>
                 <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                Now, I spend my time exploring robotics and coding, experimenting, learning, and occasionally breaking things just to understand them better. I keep things light, stay curious, and believe in showing up when it counts.
+                These days, I spend my time exploring robotics and coding, trying things out, learning as I go, and sometimes breaking things just to understand them better. I like to keep things simple, stay curious, and focus on showing up when it counts.
               </p>
               <p>
                 <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                Somewhere between chill and driven, I’m always figuring things out and turning ideas into something real.
+                I’d say I’m somewhere between chill and driven, just figuring things out and turning ideas into something real.
               </p>
               
               <div className="mt-10 pt-6 border-t border-slate-800/50 flex items-center text-slate-500 font-mono text-sm">
