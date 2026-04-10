@@ -1,16 +1,38 @@
-# React + Vite
+# Arham Mayur Burad - Robotics Portfolio 🤖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dark-themed, highly interactive portfolio website built for a Robotics & Software Engineering student at PES University. Features a terminal-style UI, neon electric blue accents, and engaging micro-animations.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- **Dark & Techy Aesthetic:** Neon grid backgrounds, IDE-style window cards, and glassmorphism.
+- **Dynamic Animations:** Powered by `framer-motion` for smooth scroll reveals and slick layout transitions.
+- **Live Contact Form:** Fully functional `System.Ping` terminal built natively with [Web3Forms](https://web3forms.com/).
+- **Responsive Design:** Crafted strictly with Tailwind CSS to work perfectly across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Animations:** Framer Motion
+- **Form Handling:** Web3Forms
 
-## React Compiler
+## 🏃‍♂️ Running Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/arhamburadd/arham-portfolio.git
+   cd arham-portfolio
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+## 📬 Contact
+- **GitHub:** [@arhamburadd](https://github.com/arhamburadd)
+- **YouTube:** [RoboArham](https://www.youtube.com/@roboarhamburad4813)
