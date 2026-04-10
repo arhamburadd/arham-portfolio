@@ -65,7 +65,7 @@ export default function Hero() {
             className="group cursor-pointer flex items-center justify-center px-8 py-4 rounded-xl bg-electricBlue text-darkBg font-bold transition-all shadow-glow-blue hover:shadow-[0_0_25px_rgba(0,243,255,0.8)] hover:-translate-y-1"
           >
             <Container size={20} className="mr-2" />
-            Initialize Projects
+            View Projects
           </Link>
           
           <a
