@@ -62,12 +62,10 @@ export default function RoboticsJourney() {
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               className="mb-12 ml-10 relative group"
             >
-              {/* Timeline dot/icon */}
               <span className={`absolute -left-[58px] flex items-center justify-center w-10 h-10 rounded-full ${event.color} ring-4 ring-[#030712] shadow-lg group-hover:scale-110 transition-transform duration-300 z-10`}>
                 {event.icon}
               </span>
 
-              {/* Content Card */}
               <div className="bg-darkCard p-6 md:p-8 rounded-xl border border-slate-800 hover:border-slate-600 transition-colors shadow-lg">
                 <span className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-500 mb-2 block">
                   Phase: {event.year}

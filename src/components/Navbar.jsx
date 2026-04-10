@@ -28,12 +28,10 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-lightBg/80 dark:bg-darkBg/80 backdrop-blur-md shadow-sm dark:shadow-slate-800/50' : 'py-5 bg-transparent'}`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        {/* Logo */}
         <Link to="home" smooth={true} duration={500} className="text-xl md:text-2xl font-bold font-sans cursor-pointer text-slate-800 dark:text-white group">
           <span className="text-accentBg">&lt;</span>Arham <span className="text-accentBg">/&gt;</span>
         </Link>
         
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">
             {navLinks.map((link) => (
@@ -61,7 +59,6 @@ export default function Navbar() {
           </button>
         </div>
         
-        {/* Mobile Toggle & Menu Header */}
         <div className="md:hidden flex items-center space-x-4">
           <button 
             onClick={toggleDarkMode} 
@@ -76,7 +73,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 

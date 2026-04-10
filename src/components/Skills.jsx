@@ -45,7 +45,6 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-24 px-6 relative bg-darkBg">
-      {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-grid-pattern opacity-10 pointer-events-none"></div>
       
       <div className="container mx-auto max-w-5xl relative z-10">

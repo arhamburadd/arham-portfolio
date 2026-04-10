@@ -49,7 +49,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 px-6 bg-darkBg border-t border-slate-800 relative overflow-hidden">
-      {/* Decorative Grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
@@ -70,7 +69,6 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 bg-[#0A1220] rounded-2xl shadow-2xl border border-slate-800 overflow-hidden">
           
-          {/* Contact Info Panel */}
           <div className="lg:col-span-2 bg-[#050B14] p-10 text-white flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-electricBlue rounded-full mix-blend-screen filter blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
             
@@ -99,7 +97,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form Panel */}
           <div className="lg:col-span-3 p-10 bg-darkCard/50 backdrop-blur-sm">
             <form onSubmit={handleSubmit} className="space-y-6 font-mono">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

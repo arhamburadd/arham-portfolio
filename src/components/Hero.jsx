@@ -6,10 +6,8 @@ import { Container, Github, Youtube, ChevronDown } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 relative overflow-hidden bg-darkBg">
-      {/* Dynamic Tech Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-40 z-0"></div>
       
-      {/* Glowing Accents */}
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-electricBlue/10 rounded-full blur-[120px] -z-10 mix-blend-screen" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-neonGreen/10 rounded-full blur-[100px] -z-10 mix-blend-screen" />
 

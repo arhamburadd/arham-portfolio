@@ -5,7 +5,6 @@ import { Github, Code2, Database, Terminal, ChevronRight } from 'lucide-react';
 export default function SoftwareProjects() {
   return (
     <section className="py-24 px-6 bg-[#030712] relative overflow-hidden">
-      {/* Code-like background decorative elements */}
       <div className="absolute top-20 right-10 opacity-5 font-mono text-xs hidden lg:block pointer-events-none">
         <pre>{`function compile(src) {\n  return parser.parse(src)\n    .generate()\n    .optimize();\n}`}</pre>
       </div>
@@ -28,7 +27,6 @@ export default function SoftwareProjects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           
-          {/* IDE Style Project Card: Olympiad Conduction System */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +34,6 @@ export default function SoftwareProjects() {
             transition={{ duration: 0.6 }}
             className="group block relative bg-[#0D1117] rounded-xl overflow-hidden border border-slate-800 hover:border-purple-500/50 shadow-2xl transition-all duration-300"
           >
-            {/* IDE Header */}
             <div className="bg-[#161B22] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
               <div className="flex space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
@@ -58,7 +55,6 @@ export default function SoftwareProjects() {
               </a>
             </div>
             
-            {/* IDE Body */}
             <div className="p-6 md:p-8 font-mono">
               <h3 className="text-2xl font-bold text-white mb-4">Olympiad Conduction System</h3>
               
@@ -82,7 +78,6 @@ export default function SoftwareProjects() {
             </div>
           </motion.div>
 
-          {/* Empty Space / Future Projects Template */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

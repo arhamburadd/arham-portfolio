@@ -5,7 +5,6 @@ import { User, Terminal } from 'lucide-react';
 export default function About() {
   return (
     <section id="about" className="py-24 px-6 bg-darkBg border-t border-slate-800 relative overflow-hidden">
-      {/* Decorative Glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-electricBlue/10 rounded-full mix-blend-screen filter blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
       
       <div className="container mx-auto max-w-4xl relative z-10">
@@ -31,7 +30,6 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-[#0A1220] rounded-2xl shadow-2xl border border-slate-800 overflow-hidden relative"
         >
-          {/* OS Window Top Bar */}
           <div className="bg-[#050B14] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
              <div className="flex space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
@@ -42,11 +40,10 @@ export default function About() {
                 <Terminal size={14} className="mr-2" /> 
                 <span>about_me.txt - arham_burad</span>
              </div>
-             <div className="w-12"></div> {/* Spacer for centering */}
+             <div className="w-12"></div> 
           </div>
 
           <div className="p-8 md:p-12 relative overflow-hidden">
-            {/* Subtle internal glow */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-electricBlue/10 rounded-full blur-[80px]"></div>
             
             <div className="text-lg text-slate-300 leading-relaxed space-y-6 relative z-10 font-sans">

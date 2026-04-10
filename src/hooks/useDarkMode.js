@@ -7,7 +7,7 @@ export function useDarkMode() {
       if (saved) {
         return saved === 'dark';
       }
-      return true; // Default to dark mode
+      return true;
     }
     return true;
   });

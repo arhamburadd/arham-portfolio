@@ -56,7 +56,6 @@ const roboticsProjects = [
 export default function RoboticsProjects() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // Close modal when clicking outside
   const handleModalBackgroundClick = (e) => {
     if (e.target === e.currentTarget) {
       setSelectedVideo(null);
@@ -93,29 +92,24 @@ export default function RoboticsProjects() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="group relative bg-darkCard border border-slate-800 hover:border-electricBlue/40 rounded-2xl overflow-hidden shadow-lg transition-all duration-300"
             >
-              {/* Hover Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-b from-electricBlue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
               <div className="flex flex-col sm:flex-row h-full">
-                {/* Video Thumbnail Area */}
                 <div 
                   className="w-full sm:w-2/5 aspect-video sm:aspect-auto bg-slate-900 border-b sm:border-b-0 sm:border-r border-slate-800 relative cursor-pointer group-hover:border-electricBlue/40 transition-colors flex items-center justify-center overflow-hidden"
                   onClick={() => setSelectedVideo(project.videoId)}
                 >
-                  {/* YouTube Thumbnail image (maxresdefault often exists, but hqdefault is safer) */}
                   <img 
                     src={`https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg`} 
                     alt={project.title}
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 scale-105 group-hover:scale-100"
                   />
                   
-                  {/* Play Button Overlay */}
                   <div className="relative z-10 w-16 h-16 rounded-full bg-slate-900/80 border border-electricBlue/50 text-electricBlue flex items-center justify-center shadow-lg group-hover:shadow-glow-blue group-hover:scale-110 group-hover:bg-electricBlue group-hover:text-darkBg transition-all duration-300 backdrop-blur-sm">
                     <Play fill="currentColor" size={24} className="ml-1" />
                   </div>
                 </div>
                 
-                {/* Content Area */}
                 <div className="w-full sm:w-3/5 p-6 md:p-8 flex flex-col justify-center">
                   <div className="flex items-center mb-3">
                     <div className="p-2 bg-slate-800/50 rounded-lg mr-3 shadow-inner">
@@ -133,7 +127,6 @@ export default function RoboticsProjects() {
         </div>
       </div>
 
-      {/* Video Modal */}
       <AnimatePresence>
         {selectedVideo && (
           <motion.div
@@ -149,7 +142,6 @@ export default function RoboticsProjects() {
               exit={{ scale: 0.9, y: 20 }}
               className="relative w-full max-w-5xl rounded-2xl overflow-hidden bg-black shadow-[0_0_50px_rgba(0,243,255,0.2)] border border-slate-800"
             >
-              {/* Close Button */}
               <button 
                 onClick={() => setSelectedVideo(null)}
                 className="absolute top-4 right-4 z-50 p-2 bg-slate-900/80 hover:bg-red-500/20 text-slate-400 hover:text-red-500 rounded-full transition-colors backdrop-blur-sm"
