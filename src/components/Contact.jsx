@@ -59,9 +59,27 @@ export default function Contact({ addLog, onClose }) {
         <p className="text-lime text-xs font-mono tracking-widest uppercase mb-4 max-w-sm">
            Ready to engineer the future. Looking for opportunities in robotics, firmware, and software engineering.
         </p>
-        <p className="text-ghost/50 text-sm font-sans font-light max-w-sm">
+        <p className="text-ghost/50 text-sm font-sans font-light max-w-sm mb-12">
            Drop your details in the transmission form and I will get back to you as soon as possible.
         </p>
+        
+        <div className="mt-8 pt-8 border-t border-gridLine flex flex-col xl:flex-row justify-between gap-6">
+           <div>
+              <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Direct Comms</span>
+              <div className="text-sm font-mono text-ghost/80 space-y-1">
+                 <a href="tel:+910000000000" className="hover:text-lime transition-colors block cursor-none">+91 00000 00000</a>
+                 <a href="mailto:email@example.com" className="hover:text-lime transition-colors block cursor-none">email@example.com</a>
+              </div>
+           </div>
+           <div>
+              <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Networks</span>
+              <div className="text-sm font-mono text-ghost/80 flex flex-col space-y-1">
+                 <a href="https://github.com/arhamburadd" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">GitHub</a>
+                 <a href="https://linkedin.com/in/arhamburad" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">LinkedIn</a>
+                 <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">YouTube</a>
+              </div>
+           </div>
+        </div>
       </div>
 
             <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
@@ -121,7 +139,7 @@ export default function Contact({ addLog, onClose }) {
               {isSubmitting ? 'SENDING...' : isSubmitted ? 'MESSAGE SENT' : 'SEND MESSAGE'}
             </button>
 
-            <div className="mt-8 pt-8 border-t border-gridLine flex flex-col sm:flex-row justify-between gap-6">
+            <div className="mt-8 pt-8 border-t border-gridLine flex md:hidden flex-col sm:flex-row justify-between gap-6">
                <div>
                   <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Direct Comms</span>
                   <div className="text-sm font-mono text-ghost/80 space-y-1">
