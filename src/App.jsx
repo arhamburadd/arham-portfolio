@@ -100,7 +100,7 @@ function App() {
                      <div className="h-[1px] w-full bg-lime/60"></div>
                    </div>
                    <h2 className="text-[10px] tracking-widest text-lime uppercase mb-1 font-bold">Robotics Engineer & Developer</h2>
-                   <p className="text-[8px] tracking-wider text-ghost/50 font-mono">AUTOMATION_CONTROL 
+                   <p className="text-[8px] tracking-wider text-ghost/50 font-mono">AUTOMATION_CONTROL</p>
                 </div>
               </div>
               
