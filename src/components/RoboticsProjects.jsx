@@ -99,8 +99,7 @@ export default function RoboticsProjects({ addLog, onClose }) {
                onClick={() => handleSelect(p)}
                className={`border border-gridLine bg-obsidian hover:border-lime cursor-none group transition-colors flex flex-col justify-between min-h-[160px] relative overflow-hidden`}
              >
-               {/* YouTube Thumbnail Background */}
-               {p.videoId && (
+                              {p.videoId && (
                  <div 
                    className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-60 transition-opacity z-0" 
                    style={{ backgroundImage: `url(https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg)` }}
@@ -123,8 +122,7 @@ export default function RoboticsProjects({ addLog, onClose }) {
         </div>
       </div>
 
-      {/* Project Details Modal */}
-      <AnimatePresence>
+            <AnimatePresence>
         {selectedPacket && (
           <motion.div
             initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
@@ -163,8 +161,7 @@ export default function RoboticsProjects({ addLog, onClose }) {
                 </motion.p>
               </div>
 
-              {/* Video Area */}
-              {selectedPacket.videoId && (
+                            {selectedPacket.videoId && (
                 <div className="lg:w-1/2 aspect-video bg-obsidian border border-gridLine relative group flex-shrink-0">
                   <iframe 
                     width="100%" 

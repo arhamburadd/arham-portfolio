@@ -45,8 +45,7 @@ function App() {
   return (
     <div className="w-screen h-screen bg-obsidian text-ghost font-mono overflow-hidden relative selection:bg-lime selection:text-obsidian flex flex-col justify-between">
       
-      {/* Subtle Noise Overlay */}
-      <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none z-50 mix-blend-overlay"></div>
+            <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none z-50 mix-blend-overlay"></div>
 
       <AnimatePresence>
         {!booted && (
@@ -67,11 +66,9 @@ function App() {
         )}
       </AnimatePresence>
 
-      {/* CORE HUD */}
-      <div className="relative w-full h-full flex-grow flex items-center justify-center p-8">
+            <div className="relative w-full h-full flex-grow flex items-center justify-center p-8">
         
-        {/* Generative Core & Home Screen Details */}
-        <AnimatePresence>
+                <AnimatePresence>
           {activeWindow === 'HOME' && booted && (
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -80,8 +77,7 @@ function App() {
               transition={{ duration: 0.5 }}
               className="relative w-full h-full flex flex-col items-center justify-center pointer-events-none"
             >
-              {/* Spinning Core Display */}
-              <div className="relative w-72 h-72 md:w-96 md:h-96 flex flex-col items-center justify-center mb-12">
+                            <div className="relative w-72 h-72 md:w-96 md:h-96 flex flex-col items-center justify-center mb-12">
                 <motion.div 
                   animate={{ rotate: 360 }}
                   transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
@@ -104,7 +100,7 @@ function App() {
                      <div className="h-[1px] w-full bg-lime/60"></div>
                    </div>
                    <h2 className="text-[10px] tracking-widest text-lime uppercase mb-1 font-bold">Robotics Engineer & Developer</h2>
-                   <p className="text-[8px] tracking-wider text-ghost/50 font-mono">AUTOMATION_CONTROL // SYSTEM_INTEGRATION</p>
+                   <p className="text-[8px] tracking-wider text-ghost/50 font-mono">AUTOMATION_CONTROL 
                 </div>
               </div>
               
@@ -115,11 +111,9 @@ function App() {
           )}
         </AnimatePresence>
 
-        {/* 4 Corner Navigation & Top Center Nav*/}
-        <div className="absolute inset-8 pointer-events-none z-20">
+                <div className="absolute inset-8 pointer-events-none z-20">
           
-          {/* Top Center Home Button */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-auto group hidden md:flex flex-col items-center">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-auto group hidden md:flex flex-col items-center">
             <div className="text-lime text-[10px] font-bold mb-1 flex items-center tracking-widest uppercase">
               <span className="w-4 h-[1px] bg-lime mr-2 group-hover:w-8 transition-all"></span>
               System Root
@@ -159,8 +153,7 @@ function App() {
           </button>
         </div>
 
-        {/* Windows Rendering based on Active State */}
-        <div className="absolute inset-0 pointer-events-none z-10 flex items-center justify-center">
+                <div className="absolute inset-0 pointer-events-none z-10 flex items-center justify-center">
           <AnimatePresence>
             {activeWindow === 'ABOUT' && <About addLog={addLog} onClose={() => handleNav('HOME')} />}
             {activeWindow === 'STACK' && <Skills addLog={addLog} onClose={() => handleNav('HOME')} />}

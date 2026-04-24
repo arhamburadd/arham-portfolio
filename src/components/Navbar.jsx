@@ -26,8 +26,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out ${isScrolled ? 'py-4 bg-background/70 backdrop-blur-xl border-b border-white/5' : 'py-8 bg-transparent'}`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         
-        {/* Logo */}
-        <Link 
+                <Link 
           to="home" 
           smooth={true} 
           duration={800} 
@@ -36,8 +35,7 @@ export default function Navbar() {
           ARHAM BURAD
         </Link>
         
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center space-x-10">
+                <div className="hidden md:flex items-center space-x-10">
           <ul className="flex space-x-8 text-xs font-medium tracking-wide text-zinc-400">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -62,8 +60,7 @@ export default function Navbar() {
           </a>
         </div>
         
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center">
+                <div className="md:hidden flex items-center">
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
             className="text-white"
@@ -73,8 +70,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
+            <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
             initial={{ opacity: 0, y: -20 }}

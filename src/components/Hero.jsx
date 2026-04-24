@@ -5,8 +5,7 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-[90vh] w-full relative flex flex-col justify-center px-6 md:px-12 bg-background overflow-hidden selection:bg-primary selection:text-white pt-24 pb-12">
       
-      {/* Elegant Colorful Background Glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.15, scale: 1 }}
@@ -65,8 +64,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Simplified, elegant static scroll indicator */}
-      <motion.div 
+            <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 1 }}

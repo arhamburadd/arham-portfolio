@@ -51,8 +51,7 @@ export default function RoboticsJourney() {
               transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
               className="relative"
             >
-              {/* Timeline Marker */}
-              <div className="absolute -left-[41px] md:-left-[73px] top-2 w-4 h-4 rounded-full bg-surface border-2 border-primary z-10 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                            <div className="absolute -left-[41px] md:-left-[73px] top-2 w-4 h-4 rounded-full bg-surface border-2 border-primary z-10 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
 
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-surfaceLight border border-border text-primary font-medium tracking-widest text-xs uppercase rounded-full">

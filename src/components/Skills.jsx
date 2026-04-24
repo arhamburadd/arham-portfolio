@@ -21,8 +21,6 @@ const neuralMap = [
 
 export default function Skills({ addLog, onClose }) {
   const [activeNode, setActiveNode] = useState(null);
-
-  // Click handler to clear selection if background is clicked
   const handleBackgroundClick = () => {
     if (activeNode !== null) {
       setActiveNode(null);
@@ -37,8 +35,7 @@ export default function Skills({ addLog, onClose }) {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="absolute top-24 bottom-24 left-8 md:left-24 right-8 md:right-24 pointer-events-auto flex flex-col md:flex-row shadow-[0_0_50px_rgba(204,255,0,0.05)] backdrop-blur-md overflow-hidden"
     >
-      {/* Left side text block */}
-      <div className="hidden md:flex flex-col justify-center w-1/2 p-12 bg-obsidian border border-gridLine border-r-0 relative overflow-hidden">
+            <div className="hidden md:flex flex-col justify-center w-1/2 p-12 bg-obsidian border border-gridLine border-r-0 relative overflow-hidden">
         <h2 className="text-6xl lg:text-8xl font-sans font-black tracking-tighter text-ghost mb-6 leading-none">
           THE <br/> SYSTEM <br/> <span className="text-lime">CORE.</span>
         </h2>
@@ -50,19 +47,16 @@ export default function Skills({ addLog, onClose }) {
         </p>
       </div>
 
-      {/* Right side Neural Map */}
-      <div className="w-full flex-1 md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-hidden relative">
+            <div className="w-full flex-1 md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-hidden relative">
         <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 relative">
           <span className="text-lime text-xs font-bold tracking-widest uppercase">Technical Capabilities</span>
           <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
         </div>
 
         <div className="flex-grow relative overflow-hidden bg-obsidian cursor-pointer md:cursor-none" onClick={handleBackgroundClick}>
-          {/* Background Grid */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
   
-          {/* Lines connecting some nodes purely decorative using SVG */}
-          <svg className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-300 ${activeNode !== null ? 'opacity-5' : 'opacity-20'}`}>
+                    <svg className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-300 ${activeNode !== null ? 'opacity-5' : 'opacity-20'}`}>
              <line x1="50%" y1="20%" x2="30%" y2="35%" stroke="#CCFF00" strokeWidth="1" />
              <line x1="50%" y1="20%" x2="70%" y2="32%" stroke="#CCFF00" strokeWidth="1" />
              <line x1="30%" y1="35%" x2="20%" y2="55%" stroke="#CCFF00" strokeWidth="1" />
@@ -98,16 +92,14 @@ export default function Skills({ addLog, onClose }) {
                   `}>
                     {node.name}
                   </div>
-                  {/* Blinking indicator dot */}
-                  <div className={`absolute -top-1 -right-1 w-2 h-2 rounded-full bg-lime ${isActive ? 'animate-ping' : 'animate-fast-pulse'}`}></div>
+                                    <div className={`absolute -top-1 -right-1 w-2 h-2 rounded-full bg-lime ${isActive ? 'animate-ping' : 'animate-fast-pulse'}`}></div>
                 </div>
               </motion.div>
             );
           })}
         </div>
         
-        {/* Legend Map Bottom */}
-        <div className="p-3 bg-obsidian border-t border-gridLine flex justify-between tracking-widest text-[8px] text-lime">
+                <div className="p-3 bg-obsidian border-t border-gridLine flex justify-between tracking-widest text-[8px] text-lime">
           <span>CORE: ROOT</span>
           <span>HARDWARE: LOGIC</span>
           <span>WEB: RENDER</span>

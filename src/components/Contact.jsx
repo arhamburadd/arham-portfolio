@@ -52,8 +52,7 @@ export default function Contact({ addLog, onClose }) {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="absolute top-24 bottom-24 left-8 md:left-24 right-8 md:right-24 pointer-events-auto flex flex-col md:flex-row shadow-[0_0_50px_rgba(204,255,0,0.05)] backdrop-blur-md overflow-hidden"
     >
-      {/* Left side dynamic text block */}
-      <div className="hidden md:flex flex-col justify-center w-1/2 p-12 bg-obsidian border border-gridLine border-r-0 relative overflow-hidden">
+            <div className="hidden md:flex flex-col justify-center w-1/2 p-12 bg-obsidian border border-gridLine border-r-0 relative overflow-hidden">
         <h2 className="text-6xl lg:text-8xl font-sans font-black tracking-tighter text-ghost mb-6 leading-none">
           LET'S <br/> BUILD.
         </h2>
@@ -65,8 +64,7 @@ export default function Contact({ addLog, onClose }) {
         </p>
       </div>
 
-      {/* Right side form */}
-      <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
+            <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
         <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 sticky top-0">
           <span className="text-lime text-xs font-bold tracking-widest uppercase">Contact Form</span>
           <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
