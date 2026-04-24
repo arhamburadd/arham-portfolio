@@ -68,8 +68,8 @@ export default function Contact({ addLog, onClose }) {
            <div>
               <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Direct Comms</span>
               <div className="text-sm font-mono text-ghost/80 space-y-2">
-                 <a href="tel:+919790472763" className="flex items-center gap-2 hover:text-lime transition-colors cursor-none">
-                    <Phone size={14} /> <span>+91 97904 72763</span>
+                 <a href="tel:+917904727631" className="flex items-center gap-2 hover:text-lime transition-colors cursor-none">
+                    <Phone size={14} /> <span>+91 79047 27631</span>
                  </a>
                  <a href="mailto:arhamburad@gmail.com" className="flex items-center gap-2 hover:text-lime transition-colors cursor-none">
                     <Mail size={14} /> <span>arhamburad@gmail.com</span>
@@ -154,8 +154,8 @@ export default function Contact({ addLog, onClose }) {
                <div>
                   <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Direct Comms</span>
                   <div className="text-sm font-mono text-ghost/80 space-y-2">
-                     <a href="tel:+919790472763" className="flex items-center gap-2 hover:text-lime transition-colors cursor-pointer md:cursor-none">
-                        <Phone size={14} /> <span>+91 97904 72763</span>
+                     <a href="tel:+917904727631" className="flex items-center gap-2 hover:text-lime transition-colors cursor-pointer md:cursor-none">
+                        <Phone size={14} /> <span>+91 79047 27631</span>
                      </a>
                      <a href="mailto:arhamburad@gmail.com" className="flex items-center gap-2 hover:text-lime transition-colors cursor-pointer md:cursor-none">
                         <Mail size={14} /> <span>arhamburad@gmail.com</span>
