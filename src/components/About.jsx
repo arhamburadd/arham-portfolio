@@ -19,10 +19,10 @@ export default function About({ addLog, onClose }) {
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: -50, scale: 0.95 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="absolute top-24 bottom-24 left-8 md:left-24 right-8 md:right-24 pointer-events-auto flex flex-col md:flex-row shadow-[0_0_50px_rgba(204,255,0,0.05)] backdrop-blur-md overflow-hidden"
+      className="absolute top-24 bottom-24 left-8 md:left-24 right-8 md:right-24 pointer-events-auto flex flex-col md:flex-row shadow-[0_0_50px_rgba(204,255,0,0.05)] backdrop-blur-md overflow-y-auto md:overflow-hidden"
     >
       {/* Left side text block */}
-      <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine border-r-0 overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
+      <div className="w-full h-max md:h-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine border-b-0 md:border-b md:border-r-0 md:overflow-y-auto flex-shrink-0 md:flex-shrink" style={{ scrollbarWidth: 'none' }}>
         <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 sticky top-0">
           <span className="text-[#A2FFA2] text-xs font-bold tracking-widest uppercase">System Diagnostics / Identity</span>
           <button onClick={onClose} className="text-ghost hover:text-[#A2FFA2] text-xs font-bold block md:hidden">CLOSE X</button>
@@ -55,8 +55,8 @@ export default function About({ addLog, onClose }) {
       </div>
 
       {/* Right side Timeline */}
-      <div className="hidden md:flex flex-col w-1/2 bg-obsidian border border-gridLine p-8 lg:p-12 relative overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
-        <button onClick={onClose} className="absolute top-4 right-4 text-ghost hover:text-[#A2FFA2] text-xs font-bold z-20">CLOSE X</button>
+      <div className="flex flex-col w-full h-max md:h-full md:w-1/2 bg-obsidian border border-gridLine p-8 lg:p-12 relative md:overflow-y-auto flex-shrink-0 md:flex-shrink" style={{ scrollbarWidth: 'none' }}>
+        <button onClick={onClose} className="absolute top-4 right-4 text-ghost hover:text-[#A2FFA2] text-xs font-bold z-20 hidden md:block">CLOSE X</button>
         
         <h3 className="text-[#A2FFA2] text-xs font-bold tracking-widest uppercase mb-8 mt-4 md:mt-0">
           JOURNEY LOG: HARDWARE & SOFTWARE

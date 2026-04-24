@@ -43,7 +43,7 @@ export default function Skills({ addLog, onClose }) {
       </div>
 
       {/* Right side Neural Map */}
-      <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-hidden relative">
+      <div className="w-full flex-1 md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-hidden relative">
         <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 relative">
           <span className="text-lime text-xs font-bold tracking-widest uppercase">Technical Capabilities</span>
           <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
