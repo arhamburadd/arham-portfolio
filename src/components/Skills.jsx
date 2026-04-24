@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const neuralMap = [
@@ -20,6 +20,14 @@ const neuralMap = [
 ];
 
 export default function Skills({ addLog, onClose }) {
+  const [activeNode, setActiveNode] = useState(null);
+
+  // Click handler to clear selection if background is clicked
+  const handleBackgroundClick = () => {
+    if (activeNode !== null) {
+      setActiveNode(null);
+    }
+  };
 
   return (
     <motion.div 
@@ -49,12 +57,12 @@ export default function Skills({ addLog, onClose }) {
           <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
         </div>
 
-        <div className="flex-grow relative overflow-hidden bg-obsidian">
+        <div className="flex-grow relative overflow-hidden bg-obsidian cursor-pointer md:cursor-none" onClick={handleBackgroundClick}>
           {/* Background Grid */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
   
           {/* Lines connecting some nodes purely decorative using SVG */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
+          <svg className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-300 ${activeNode !== null ? 'opacity-5' : 'opacity-20'}`}>
              <line x1="50%" y1="20%" x2="30%" y2="35%" stroke="#CCFF00" strokeWidth="1" />
              <line x1="50%" y1="20%" x2="70%" y2="32%" stroke="#CCFF00" strokeWidth="1" />
              <line x1="30%" y1="35%" x2="20%" y2="55%" stroke="#CCFF00" strokeWidth="1" />
@@ -65,28 +73,37 @@ export default function Skills({ addLog, onClose }) {
              <line x1="75%" y1="50%" x2="65%" y2="82%" stroke="#CCFF00" strokeWidth="1" />
           </svg>
   
-          {neuralMap.map((node, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.05, type: "spring" }}
-              className={`absolute flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 cursor-none group`}
-              style={{ top: node.top, left: node.left }}
-              onClick={() => addLog(`Inspected neural node: ${node.name}`)}
-            >
-              <div className="scale-[0.7] md:scale-100 origin-center transition-transform relative">
-                <div className={`
-                  ${node.size === 'lg' ? 'p-4 text-xs' : node.size === 'md' ? 'p-3 text-[10px]' : 'p-2 text-[8px]'}
-                  bg-cyberGray border border-lime text-ghost tracking-widest uppercase rounded shadow-[0_0_15px_rgba(204,255,0,0.1)] group-hover:bg-lime group-hover:text-obsidian transition-colors font-mono
-                `}>
-                  {node.name}
+          {neuralMap.map((node, i) => {
+            const isActive = activeNode === i;
+            const isFaded = activeNode !== null && !isActive;
+
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: isFaded ? 0.2 : 1, scale: 1 }}
+                transition={{ delay: i * 0.05, type: "spring" }}
+                className={`absolute flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 cursor-pointer md:cursor-none group ${isActive ? 'z-50' : 'z-10'}`}
+                style={{ top: node.top, left: node.left }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveNode(isActive ? null : i);
+                  if (!isActive) addLog(`Inspected neural node: ${node.name}`);
+                }}
+              >
+                <div className={`scale-[0.7] md:scale-100 origin-center transition-all duration-300 relative ${isActive ? 'scale-[0.9] md:scale-110' : ''}`}>
+                  <div className={`
+                    ${node.size === 'lg' ? 'p-4 text-xs' : node.size === 'md' ? 'p-3 text-[10px]' : 'p-2 text-[8px]'}
+                    bg-cyberGray border ${isActive ? 'border-lime bg-lime/10' : 'border-lime'} text-ghost tracking-widest uppercase rounded shadow-[0_0_15px_rgba(204,255,0,0.1)] group-hover:bg-lime group-hover:text-obsidian transition-colors font-mono
+                  `}>
+                    {node.name}
+                  </div>
+                  {/* Blinking indicator dot */}
+                  <div className={`absolute -top-1 -right-1 w-2 h-2 rounded-full bg-lime ${isActive ? 'animate-ping' : 'animate-fast-pulse'}`}></div>
                 </div>
-                {/* Blinking indicator dot */}
-                <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-lime animate-fast-pulse"></div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
         
         {/* Legend Map Bottom */}
