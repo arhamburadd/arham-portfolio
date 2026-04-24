@@ -1,77 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Terminal } from 'lucide-react';
 
-export default function About() {
+const timelineEvents = [
+  { year: "Phase 01", command: "Foundational Hardware", desc: "Started at Sritech academy in 6th standard. Built a Color Sorter as my first major physical project. Progressed quickly to complete a PIR Security System for basic human detection, a Line Follower optimized for strict competition routing, and an autonomous Obstacle Avoider robot capable of dynamic pathfinding." },
+  { year: "Phase 02", command: "Crisis Innovation", desc: "Utilized the global lockdown period to push into high difficulty custom builds. Completed the Mini Robo from scratch, which presented significant motor mapping and technical challenges. Expanded my hardware skill tree by building an interactive LCD Display interface and a Smart Dustbin powered by ultrasonic distancing logic.", noHyphen: true },
+  { year: "Phase 03", command: "National Recognition", desc: "Designed, tested, and deployed a rapid-response Thief Detector system for a national robotics event held at IIT Madras. Focused heavily on high-speed sensor fusion, reliable signal processing under pressure, and mitigating false positives in a competitive environment." },
+  { year: "Phase 04", command: "Software Expansion", desc: "Transitioned skills into pure software engineering to balance my hardware background. Key digital projects include a comprehensive Olympiad Conduction database system for competition management and an advanced Hand Gesture Control application built using OpenCV and Python.", isGesture: true }
+];
+
+export default function About({ addLog, onClose }) {
+  const handleScroll = (e) => {
+    // optional logging if we want
+  };
+
   return (
-    <section id="about" className="py-24 px-6 bg-darkBg border-t border-slate-800 relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-electricBlue/10 rounded-full mix-blend-screen filter blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
-      
-      <div className="container mx-auto max-w-4xl relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <div className="flex items-center justify-center mb-4">
-            <User className="text-electricBlue mr-4" size={32} />
-            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">System<span className="text-electricBlue">.Profile</span></h2>
-          </div>
-          <div className="w-24 h-1 bg-electricBlue mx-auto rounded-full mb-6 shadow-glow-blue"></div>
-          <p className="text-slate-400 font-mono">Initializing user entity data...</p>
-        </motion.div>
+    <motion.div 
+      initial={{ opacity: 0, x: -50, scale: 0.95 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      exit={{ opacity: 0, x: -50, scale: 0.95 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="absolute top-24 bottom-24 left-8 md:left-24 right-8 md:right-24 pointer-events-auto flex flex-col md:flex-row shadow-[0_0_50px_rgba(204,255,0,0.05)] backdrop-blur-md overflow-hidden"
+    >
+      {/* Left side text block */}
+      <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine border-r-0 overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
+        <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 sticky top-0">
+          <span className="text-[#A2FFA2] text-xs font-bold tracking-widest uppercase">System Diagnostics / Identity</span>
+          <button onClick={onClose} className="text-ghost hover:text-[#A2FFA2] text-xs font-bold block md:hidden">CLOSE X</button>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-[#0A1220] rounded-2xl shadow-2xl border border-slate-800 overflow-hidden relative"
-        >
-          <div className="bg-[#050B14] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
-             <div className="flex space-x-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-             </div>
-             <div className="text-slate-500 font-mono text-xs flex items-center">
-                <Terminal size={14} className="mr-2" /> 
-                <span>about_me.txt - arham_burad</span>
-             </div>
-             <div className="w-12"></div> 
+        <div className="p-8 lg:p-12">
+          <h2 className="text-5xl lg:text-7xl font-sans font-black tracking-tighter text-ghost mb-8 leading-none">
+            ENGINEER <br className="hidden md:block" /> THE <span className="text-[#A2FFA2]">MIND.</span>
+          </h2>
+          
+          <div className="space-y-6 text-sm font-sans font-light text-ghost/80 leading-relaxed mb-8 break-words text-justify" style={{ hyphens: 'none', WebkitHyphens: 'none' }}>
+            <p className="border-l-2 border-[#A2FFA2]/30 pl-4 py-1">
+              <strong className="text-white block mb-1 uppercase tracking-widest text-[10px] text-[#A2FFA2]">The Operator</strong>
+              I am Arham Mayur Burad, a second year student at PES University. I balance doing nothing with getting things done when it matters. I enjoy binge watching and gaming, but I shift into focus when productivity is required. I rely on calculated efficiency. This preparation ensures rapid execution when project demands increase. I focus on actions that produce meaningful, verifiable results.
+            </p>
+            <p className="border-l-2 border-[#A2FFA2]/30 pl-4 py-1">
+              <strong className="text-white block mb-1 uppercase tracking-widest text-[10px] text-[#A2FFA2]">The Foundation</strong>
+              My journey began in the 6th standard when motors and mechanical movement first sparked my interest. My parents saw this eagerness. They pushed me to pursue it and enrolled me in the Sritech robotics academy. Their support turned a small curiosity into a deliberate engineering pursuit. This foundation helped me understand how things work and how to build them from scratch.
+            </p>
+            <p className="border-l-2 border-[#A2FFA2]/30 pl-4 py-1">
+              <strong className="text-white block mb-1 uppercase tracking-widest text-[10px] text-[#A2FFA2]">The Process</strong>
+              These days, I spend my time exploring the intersection of hardware and code. I build, I deploy, and I break systems to understand their true design limits. I prioritize simple, robust designs over unnecessary complexity. Learning requires this constant cycle of trying things out and learning as I go. I keep things simple, stay curious, and focus on showing up when it counts.
+            </p>
+            <p className="border-l-2 border-[#A2FFA2]/30 pl-4 py-1">
+              <strong className="text-white block mb-1 uppercase tracking-widest text-[10px] text-[#A2FFA2]">The Mindset</strong>
+              I exist somewhere between chill and driven. I turn ideas into something real while figuring out the best way forward. I view my work in two halves: the hardware that built my foundation and the software logic that drives my future. My goal is consistency and solving problems in the field.
+            </p>
           </div>
+        </div>
+      </div>
 
-          <div className="p-8 md:p-12 relative overflow-hidden">
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-electricBlue/10 rounded-full blur-[80px]"></div>
-            
-            <div className="text-lg text-slate-300 leading-relaxed space-y-6 relative z-10 font-sans">
-              <p>
-                <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                Hi, I’m Arham Mayur Burad, a second-year student at PES University. I like to think I’ve figured out how to balance doing absolutely nothing and getting things done when it actually matters. I enjoy bingewatching and gaming, but when it’s time to be productive, I get things done.
-              </p>
-              <p>
-                <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                My journey started with a small interest in robotics, which slowly grew into a real curiosity about how things work and how to build them. With a lot of support and some pushing from my parents, that interest turned into something much bigger and shaped where I am today.
-              </p>
-              <p>
-                <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                These days, I spend my time exploring robotics and coding, trying things out, learning as I go, and sometimes breaking things just to understand them better. I like to keep things simple, stay curious, and focus on showing up when it counts.
-              </p>
-              <p>
-                <span className="text-electricBlue font-mono font-bold mr-2">&gt;</span>
-                I’d say I’m somewhere between chill and driven, just figuring things out and turning ideas into something real.
-              </p>
-              
-              <div className="mt-10 pt-6 border-t border-slate-800/50 flex items-center text-slate-500 font-mono text-sm">
-                <span className="animate-pulse w-3 h-5 bg-electricBlue mr-3 inline-block shadow-glow-blue"></span>
-                <span className="text-electricBlue/70 tracking-widest">AWAITING_INSTRUCTION...</span>
+      {/* Right side Timeline */}
+      <div className="hidden md:flex flex-col w-1/2 bg-obsidian border border-gridLine p-8 lg:p-12 relative overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
+        <button onClick={onClose} className="absolute top-4 right-4 text-ghost hover:text-[#A2FFA2] text-xs font-bold z-20">CLOSE X</button>
+        
+        <h3 className="text-[#A2FFA2] text-xs font-bold tracking-widest uppercase mb-8 mt-4 md:mt-0">
+          JOURNEY LOG: HARDWARE & SOFTWARE
+        </h3>
+
+        <div className="space-y-8">
+          {timelineEvents.map((ev, i) => (
+            <div key={i} className="border-l-2 border-[#A2FFA2]/30 pl-6 relative">
+              <div className="absolute top-0 -left-[5px] w-2 h-2 bg-[#A2FFA2] rounded-full shadow-[0_0_10px_#A2FFA2]"></div>
+              <div className="text-[10px] text-[#A2FFA2]/70 uppercase tracking-widest font-bold font-mono mb-1">{ev.year}</div>
+              <div className="text-ghost font-bold text-lg mb-2">{ev.command}</div>
+              <div className="text-sm text-ghost/70 font-sans font-light leading-relaxed break-words" style={{ hyphens: 'none', WebkitHyphens: 'none' }}>
+                {ev.desc.split('Hand Gesture Control').map((part, index, array) => (
+                  <React.Fragment key={index}>
+                    {part}
+                    {index !== array.length - 1 && (
+                      <span className="relative inline-block text-white font-medium">
+                        Hand Gesture Control
+                        <span className="absolute -top-1 -right-2 w-1.5 h-1.5 bg-[#A2FFA2] rounded-full animate-fast-pulse shadow-[0_0_8px_#A2FFA2]"></span>
+                      </span>
+                    )}
+                  </React.Fragment>
+                ))}
               </div>
             </div>
-          </div>
-        </motion.div>
+          ))}
+        </div>
       </div>
-    </section>
+    </motion.div>
   );
 }

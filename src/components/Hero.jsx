@@ -1,110 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
-import { Container, Github, Youtube, ChevronDown } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 relative overflow-hidden bg-darkBg">
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 z-0"></div>
+    <section id="home" className="min-h-[90vh] w-full relative flex flex-col justify-center px-6 md:px-12 bg-background overflow-hidden selection:bg-primary selection:text-white pt-24 pb-12">
       
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-electricBlue/10 rounded-full blur-[120px] -z-10 mix-blend-screen" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-neonGreen/10 rounded-full blur-[100px] -z-10 mix-blend-screen" />
-
-      <div className="container mx-auto max-w-5xl flex flex-col items-center text-center relative z-10">
-        <motion.div
+      {/* Elegant Colorful Background Glow */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8"
-        >
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-electricBlue/30 bg-electricBlue/5 shadow-glow-blue backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-neonGreen animate-pulse mr-3"></span>
-            <span className="text-electricBlue text-sm font-mono tracking-wider uppercase">System Online</span>
-          </div>
-        </motion.div>
-        
-        <motion.h1 
-          className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-2xl"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          ARHAM MAYUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-electricBlue to-neonGreen">BURAD</span>
-        </motion.h1>
+          animate={{ opacity: 0.15, scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="w-[600px] h-[600px] bg-primary rounded-full blur-[150px] mix-blend-screen absolute -top-1/4 -left-1/4"
+        ></motion.div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.15, scale: 1 }}
+          transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+          className="w-[600px] h-[600px] bg-accent rounded-full blur-[150px] mix-blend-screen absolute -bottom-1/4 -right-1/4"
+        ></motion.div>
+      </div>
 
-        <motion.h2 
-          className="text-2xl md:text-3xl font-light text-slate-300 mb-8 font-mono"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          Robotics Builder <span className="text-electricBlue mx-2">|</span> Programmer <span className="text-electricBlue mx-2">|</span> Engineer
-        </motion.h2>
-
+      <div className="container mx-auto z-10 max-w-7xl">
         <motion.p 
-          className="text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="text-muted font-medium tracking-wide text-sm md:text-base mb-6 uppercase"
         >
-          Bridging the gap between software and hardware. I design, program, and build physical systems that interact with the real world, and I document the journey along the way.
+          Robotics Builder &bull; Programmer &bull; Engineer
         </motion.p>
+        
+        <div className="overflow-hidden mb-2">
+          <motion.h1 
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-6xl md:text-[8rem] lg:text-[10rem] font-bold text-foreground tracking-tighter leading-[0.85]"
+          >
+            ARHAM
+          </motion.h1>
+        </div>
+        
+        <div className="overflow-hidden mb-12">
+          <motion.h1 
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="text-6xl md:text-[8rem] lg:text-[10rem] font-bold tracking-tighter leading-[0.85] text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+          >
+            BURAD.
+          </motion.h1>
+        </div>
 
         <motion.div 
-          className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="max-w-xl"
         >
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className="group cursor-pointer flex items-center justify-center px-8 py-4 rounded-xl bg-electricBlue text-darkBg font-bold transition-all shadow-glow-blue hover:shadow-[0_0_25px_rgba(0,243,255,0.8)] hover:-translate-y-1"
-          >
-            <Container size={20} className="mr-2" />
-            View Projects
-          </Link>
-          
-          <a
-            href="https://github.com/arhamburadd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center px-8 py-4 rounded-xl border border-slate-700 bg-darkCard/50 hover:bg-darkCard hover:border-white text-white font-medium transition-all backdrop-blur-sm"
-          >
-            <Github size={20} className="mr-2" />
-            GitHub
-          </a>
-
-          <a
-            href="https://www.youtube.com/@roboarhamburad4813"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center px-8 py-4 rounded-xl border border-red-500/30 bg-red-500/10 hover:bg-red-500/20 hover:border-red-500 text-white font-medium transition-all shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] backdrop-blur-sm"
-          >
-            <Youtube size={20} className="mr-2 text-red-500" />
-            YouTube
-          </a>
+          <p className="text-muted text-lg md:text-xl font-light leading-relaxed">
+            Bridging the gap between software and hardware. I design, program, and build physical systems that interact with the real world, and I document the journey along the way.
+          </p>
         </motion.div>
       </div>
 
+      {/* Simplified, elegant static scroll indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
+        transition={{ duration: 1.5, delay: 1 }}
+        className="absolute bottom-8 left-6 md:left-12 flex items-center space-x-4"
       >
-        <Link to="about" smooth={true} duration={500} offset={-70}>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="text-electricBlue opacity-50 hover:opacity-100 transition-opacity"
-          >
-            <ChevronDown size={32} />
-          </motion.div>
-        </Link>
+        <span className="text-xs uppercase tracking-widest text-muted">Scroll Down</span>
+        <div className="w-16 h-[1px] bg-border relative overflow-hidden">
+          <motion.div 
+            className="absolute top-0 left-0 w-full h-full bg-primary"
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
+            transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+          />
+        </div>
       </motion.div>
     </section>
   );

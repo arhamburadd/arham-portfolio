@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, ChevronsUp } from 'lucide-react';
 import { animateScroll as scroll } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,7 +8,7 @@ export default function BackToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 500) {
+      if (window.pageYOffset > 800) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -27,10 +27,12 @@ export default function BackToTop() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           onClick={() => scroll.scrollToTop({ duration: 800, smooth: 'easeInOutQuart' })}
-          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-slate-800 dark:bg-electricBlue/20 text-white dark:text-electricBlue border border-transparent dark:border-electricBlue/50 shadow-lg dark:hover:shadow-glow-blue transition-all group"
+          className="fixed bottom-8 right-8 z-50 p-3 bg-panel border-2 border-electricBlue text-electricBlue hover:bg-electricBlue hover:text-black shadow-glow-blue transition-all group flex items-center justify-center cursor-none"
           aria-label="Back to top"
+          data-cursor="magnetic"
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
         >
-          <ArrowUp size={24} className="group-hover:-translate-y-1 transition-transform" />
+          <ChevronsUp size={24} className="group-hover:-translate-y-1 transition-transform" />
         </motion.button>
       )}
     </AnimatePresence>
