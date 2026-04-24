@@ -67,16 +67,16 @@ export default function Contact({ addLog, onClose }) {
            <div>
               <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Direct Comms</span>
               <div className="text-sm font-mono text-ghost/80 space-y-1">
-                 <a href="tel:+910000000000" className="hover:text-lime transition-colors block cursor-none">+91 00000 00000</a>
-                 <a href="mailto:email@example.com" className="hover:text-lime transition-colors block cursor-none">email@example.com</a>
+                 <a href="tel:+97904727631" className="hover:text-lime transition-colors block cursor-none">+91 00000 00000</a>
+                 <a href="mailto:arhamburad@gmail.com" className="hover:text-lime transition-colors block cursor-none">email@example.com</a>
               </div>
            </div>
            <div>
               <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Networks</span>
               <div className="text-sm font-mono text-ghost/80 flex flex-col space-y-1">
-                 <a href="https://github.com/arhamburadd" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">GitHub</a>
-                 <a href="https://linkedin.com/in/arhamburad" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">LinkedIn</a>
-                 <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">YouTube</a>
+                 <a href="https://github.com/arhamburadd" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">💻 GitHub</a>
+                 <a href="https://www.linkedin.com/in/arham-burad-68a016366/?skipRedirect=true" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">💼 LinkedIn</a>
+                 <a href="https://www.youtube.com/@roboarhamburad4813" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-none">▶️ YouTube</a>
               </div>
            </div>
         </div>
@@ -150,9 +150,9 @@ export default function Contact({ addLog, onClose }) {
                <div>
                   <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Networks</span>
                   <div className="text-sm font-mono text-ghost/80 flex flex-col space-y-1">
-                     <a href="https://github.com/arhamburadd" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-pointer md:cursor-none">GitHub</a>
-                     <a href="https://linkedin.com/in/arhamburad" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-pointer md:cursor-none">LinkedIn</a>
-                     <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-pointer md:cursor-none">YouTube</a>
+                     <a href="https://github.com/arhamburadd" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-pointer md:cursor-none">💻 GitHub</a>
+                     <a href="https://linkedin.com/in/arhamburad" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-pointer md:cursor-none">💼 LinkedIn</a>
+                     <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="hover:text-lime transition-colors cursor-pointer md:cursor-none">▶️ YouTube</a>
                   </div>
                </div>
             </div>
