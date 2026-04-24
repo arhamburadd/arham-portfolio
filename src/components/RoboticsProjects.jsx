@@ -88,8 +88,8 @@ export default function RoboticsProjects({ addLog, onClose }) {
         <button onClick={onClose} className="text-ghost hover:text-lime text-xs">CLOSE X</button>
       </div>
 
-      <div className="p-8 overflow-y-auto flex-grow relative z-10" style={{ scrollbarWidth: 'none' }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="p-4 md:p-8 overflow-y-auto flex-grow relative z-10" style={{ scrollbarWidth: 'none' }}>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
            {allProjects.map((p, idx) => (
              <motion.div
                key={idx}
