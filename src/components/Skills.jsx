@@ -2,21 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const neuralMap = [
-  { name: "C / C++", top: "20%", left: "50%", size: "lg", type: "core" },
-  { name: "Python", top: "35%", left: "30%", size: "lg", type: "core" },
-  { name: "JavaScript", top: "30%", left: "70%", size: "md", type: "core" },
+  { name: "C / C++", top: "25%", left: "50%", size: "lg", type: "core" },
+  { name: "Python", top: "35%", left: "35%", size: "lg", type: "core" },
+  { name: "JavaScript", top: "35%", left: "65%", size: "md", type: "core" },
   
-  { name: "React", top: "50%", left: "75%", size: "md", type: "web" },
-  { name: "Tailwind CSS", top: "65%", left: "80%", size: "sm", type: "web" },
-  { name: "HTML", top: "45%", left: "90%", size: "sm", type: "web" },
+  { name: "React", top: "50%", left: "70%", size: "md", type: "web" },
+  { name: "Tailwind CSS", top: "60%", left: "75%", size: "sm", type: "web" },
+  { name: "HTML", top: "45%", left: "80%", size: "sm", type: "web" },
   
-  { name: "Arduino", top: "55%", left: "20%", size: "lg", type: "hardware" },
-  { name: "Microcontrollers", top: "70%", left: "30%", size: "md", type: "hardware" },
-  { name: "Sensors & Motors", top: "80%", left: "45%", size: "md", type: "hardware" },
-  { name: "Circuit Design", top: "65%", left: "10%", size: "sm", type: "hardware" },
+  { name: "Arduino", top: "55%", left: "25%", size: "lg", type: "hardware" },
+  { name: "Microcontrollers", top: "65%", left: "35%", size: "md", type: "hardware" },
+  { name: "Sensors & Motors", top: "75%", left: "45%", size: "md", type: "hardware" },
+  { name: "Circuit Design", top: "60%", left: "15%", size: "sm", type: "hardware" },
   
-  { name: "Git / GitHub", top: "85%", left: "65%", size: "md", type: "tools" },
-  { name: "MySQL", top: "75%", left: "55%", size: "sm", type: "tools" },
+  { name: "Git / GitHub", top: "80%", left: "60%", size: "md", type: "tools" },
+  { name: "MySQL", top: "70%", left: "55%", size: "sm", type: "tools" },
 ];
 
 export default function Skills({ addLog, onClose }) {
@@ -55,14 +55,14 @@ export default function Skills({ addLog, onClose }) {
   
           {/* Lines connecting some nodes purely decorative using SVG */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
-             <line x1="50%" y1="20%" x2="30%" y2="35%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="50%" y1="20%" x2="70%" y2="30%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="30%" y1="35%" x2="20%" y2="55%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="70%" y1="30%" x2="75%" y2="50%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="20%" y1="55%" x2="30%" y2="70%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="30%" y1="70%" x2="45%" y2="80%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="75%" y1="50%" x2="80%" y2="65%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="75%" y1="50%" x2="65%" y2="85%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="50%" y1="25%" x2="35%" y2="35%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="50%" y1="25%" x2="65%" y2="35%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="35%" y1="35%" x2="25%" y2="55%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="65%" y1="35%" x2="70%" y2="50%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="25%" y1="55%" x2="35%" y2="65%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="35%" y1="65%" x2="45%" y2="75%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="70%" y1="50%" x2="75%" y2="60%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="70%" y1="50%" x2="60%" y2="80%" stroke="#CCFF00" strokeWidth="1" />
           </svg>
   
           {neuralMap.map((node, i) => (
