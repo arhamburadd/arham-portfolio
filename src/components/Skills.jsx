@@ -50,7 +50,13 @@ export default function Skills({ addLog, onClose }) {
             <div className="w-full flex-1 md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-hidden relative">
         <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 relative">
           <span className="text-lime text-xs font-bold tracking-widest uppercase">Technical Capabilities</span>
-          <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
+          <div className="flex gap-4 items-center">
+            <a href="/Resume.pdf" download className="border border-lime text-lime px-4 py-1.5 hover:bg-lime hover:text-obsidian transition-colors text-xs font-bold tracking-widest flex items-center gap-2 cursor-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              DOWNLOAD RESUME
+            </a>
+            <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
+          </div>
         </div>
 
         <div className="flex-grow relative overflow-hidden bg-obsidian cursor-pointer md:cursor-none" onClick={handleBackgroundClick}>

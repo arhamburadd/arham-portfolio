@@ -60,11 +60,16 @@ export default function Contact({ addLog, onClose }) {
         <p className="text-lime text-xs font-mono tracking-widest uppercase mb-4 max-w-sm">
            Ready to engineer the future. Looking for opportunities in robotics, firmware, and software engineering.
         </p>
-        <p className="text-ghost/50 text-sm font-sans font-light max-w-sm mb-12">
+        <p className="text-ghost/50 text-sm font-sans font-light max-w-sm mb-8">
            Drop your details in the transmission form and I will get back to you as soon as possible.
         </p>
         
-        <div className="mt-8 pt-8 border-t border-gridLine flex flex-col xl:flex-row justify-between gap-6">
+        <a href="/Resume.pdf" download className="inline-flex w-fit border border-lime text-lime px-6 py-3 hover:bg-lime hover:text-obsidian transition-colors text-sm font-bold tracking-widest uppercase items-center gap-3 cursor-none mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          DOWNLOAD RESUME
+        </a>
+
+        <div className="mt-4 pt-8 border-t border-gridLine flex flex-col xl:flex-row justify-between gap-6">
            <div>
               <span className="block text-[10px] text-lime tracking-widest uppercase mb-2">Direct Comms</span>
               <div className="text-sm font-mono text-ghost/80 space-y-2">
@@ -96,7 +101,13 @@ export default function Contact({ addLog, onClose }) {
             <div className="w-full md:w-1/2 flex flex-col bg-cyberGray border border-gridLine overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
         <div className="flex justify-between items-center p-4 border-b border-gridLine bg-obsidian z-10 sticky top-0">
           <span className="text-lime text-xs font-bold tracking-widest uppercase">Contact Form</span>
-          <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
+          <div className="flex gap-4 items-center">
+            <a href="/Resume.pdf" download className="md:hidden border border-lime text-lime px-3 py-1 hover:bg-lime hover:text-obsidian transition-colors text-[10px] font-bold tracking-widest flex items-center gap-1.5 cursor-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              RESUME
+            </a>
+            <button onClick={onClose} className="text-ghost hover:text-lime text-xs font-bold">CLOSE X</button>
+          </div>
         </div>
 
         <div className="p-8 lg:p-12">
