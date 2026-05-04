@@ -70,7 +70,8 @@ export default function Skills({ addLog, onClose }) {
              <line x1="20%" y1="55%" x2="30%" y2="70%" stroke="#CCFF00" strokeWidth="1" />
              <line x1="30%" y1="70%" x2="45%" y2="85%" stroke="#CCFF00" strokeWidth="1" />
              <line x1="75%" y1="50%" x2="80%" y2="65%" stroke="#CCFF00" strokeWidth="1" />
-             <line x1="75%" y1="50%" x2="65%" y2="82%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="30%" y1="35%" x2="50%" y2="75%" stroke="#CCFF00" strokeWidth="1" />
+             <line x1="70%" y1="32%" x2="85%" y2="45%" stroke="#CCFF00" strokeWidth="1" />
           </svg>
   
           {neuralMap.map((node, i) => {
