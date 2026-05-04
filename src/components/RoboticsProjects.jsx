@@ -5,7 +5,7 @@ const allProjects = [
   {
     id: "RBT-01",
     title: "Mini Robo",
-    description: "One of my first dives into robotics! I built this small guy to learn the basics of motor control and movement. It's simple, but seeing it drive around for the first time was incredibly rewarding.",
+    description: "I built a humanoid robot on wheels that can move around and perform human gestures like handshakes. I used an Arduino board and wrote the control logic in C to handle the motors. The robot uses servos for arm movement and DC motors for driving. To make it easy to use, I connected it to a mobile app so you can control its movements wirelessly in real-time.",
     type: "HARDWARE",
     videoId: "V3DdkZ3DE8k"
   },
@@ -19,7 +19,7 @@ const allProjects = [
   {
     id: "RBT-03",
     title: "Smart Dustbin",
-    description: "A fun and practical weekend build. I hooked up an ultrasonic sensor to a servo motor so the lid pops open automatically when you go to throw something away. Small quality-of-life improvements are the best!",
+    description: "A fun and practical weekend build. I hooked up an ultrasonic sensor to a servo motor so the lid pops open automatically when you go to throw something away. Small quality of life improvements are the best!",
     type: "HARDWARE",
     videoId: "vRh5scW5Eeo"
   },
@@ -33,7 +33,7 @@ const allProjects = [
   {
     id: "RBT-05",
     title: "LCD Display Project",
-    description: "My introduction to digital interfaces. I wired up a standard LCD to a microcontroller and wrote the code to display real-time text and sensor readings. It sounds simple, but getting the I2C communication right was a great learning curve.",
+    description: "My introduction to digital interfaces. I wired up a standard LCD to a microcontroller and wrote the code to display real-time text and sensor readings. It sounds simple, but getting the Display right was a great learning curve.",
     type: "HARDWARE",
     videoId: "X4tmy28xi6Q"
   },
@@ -61,7 +61,14 @@ const allProjects = [
   {
     id: "SFT-01",
     title: "Olympiad Conduction System",
-    description: "A comprehensive system designed to help conduct and manage Olympiad competitions securely and easily, including full participant data management. Built for reliability.",
+    description: "This is a desktop-based exam management system built using Python, Tkinter, and MySQL. Students can register, choose subjects, and store details. On the admin side, marks can be entered through a simple interface. The system calculates total marks, percentage, grade, and pass/fail status automatically. It also generates both all-India and state-wise rankings based on performance. Users can log in anytime to check their full results.",
+    type: "SOFTWARE",
+    videoId: ""
+  },
+  {
+    id: "SFT-02",
+    title: "Handtrack Assistant",
+    description: "I built a computer vision tool that lets you control your computer using hand gestures. It uses MediaPipe to track hand movements and a custom state machine to switch between modes like volume, brightness, and screenshots. I used OpenCV to create a live on-screen menu that gives you visual feedback as you gesture. To make it reliable, I added a consistency check so it only triggers when you're intentional, plus a timeout that resets everything if you stop using it. It’s basically a way to manage your system settings without ever touching a mouse or keyboard.",
     type: "SOFTWARE",
     videoId: ""
   }
